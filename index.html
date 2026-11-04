@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#480009">
+  <meta name="description" content="AMZ Jewelry — Buy and sell gold jewelry. Explore rings, necklaces, earrings, and bracelets.">
+  <title>AMZ Jewelry — Buy &amp; Sell Gold Jewelry</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preload" as="image" href="assets/hero.webp" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7.5"/><path d="m16 16 5 5"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="6.5" r="4"/><path d="M3 22v-2c0-8 18-8 18 0v2Z"/></symbol>
+      <symbol id="i-bag" viewBox="0 0 24 24"><path d="M4 7h16l1 15H3L4 7Z"/><path d="M8 9V5a4 4 0 0 1 8 0v4"/></symbol>
+      <symbol id="i-cart" viewBox="0 0 24 24"><path d="M2 3h3l3 13h11l3-10H6M9 12h11"/><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/></symbol>
+      <symbol id="i-exchange" viewBox="0 0 40 40"><path d="M4 15h30L25 6M34 15l-9 9M36 26H6l9 9M6 26l9-9"/></symbol>
+      <symbol id="i-diamond" viewBox="0 0 40 40"><path d="m3 13 7-10h20l7 10-17 24L3 13Zm0 0h34M10 3l10 34L30 3M10 3l10 10L30 3"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 40 40"><path d="M20 2c5 4 11 5 16 5v12c0 10-7 16-16 19C11 35 4 29 4 19V7c5 0 11-1 16-5Z"/><path d="m12 20 5 5 11-12"/></symbol>
+      <symbol id="i-scales" viewBox="0 0 40 40"><path d="M20 4v32M10 37h20M4 10h32M7 10 1 26h12L7 10Zm26 0-6 16h12l-6-16ZM1 26c1 6 11 6 12 0m14 0c1 6 11 6 12 0"/><circle cx="20" cy="4" r="2"/></symbol>
+      <symbol id="i-package" viewBox="0 0 40 40"><path d="m20 2 17 9v19l-17 9-17-9V11l17-9Zm0 17 17-8M20 19 3 11m17 8v20M11 7l17 9v10l-8-4M20 2l-9 5"/></symbol>
+      <symbol id="i-people" viewBox="0 0 40 40"><circle cx="20" cy="11" r="6"/><path d="M10 36v-6c0-11 20-11 20 0v6H10Zm-6-3H1v-5c0-5 3-8 8-8m27 13h3v-5c0-5-3-8-8-8M9 6a5 5 0 0 0 0 10m22-10a5 5 0 0 1 0 10"/></symbol>
+      <symbol id="i-tag" viewBox="0 0 40 40"><path d="M25 3h12v12L16 36a3 3 0 0 1-4 0L3 27a3 3 0 0 1 0-4L23 4l2-1Z"/><circle cx="30" cy="10" r="2"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="m5 5 14 14M5 19 19 5"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+    </defs>
+  </svg>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <img class="hero-image" src="assets/hero.webp" alt="Gold bangles, floral earrings, and a gold chain on burgundy satin" width="1199" height="521" fetchpriority="high">
+      <header class="site-header">
+        <a class="brand" href="#home" aria-label="AMZ Jewelry home"><img src="assets/amz-logo.webp" width="200" height="138" alt="AMZ Jewelry"></a>
+        <nav class="main-nav" aria-label="Main navigation" id="main-nav">
+          <a class="active" href="#home" aria-current="page">Home</a>
+          <a href="#collections" data-nav="buy">Buy</a>
+          <button type="button" data-open="sell">Sell</button>
+          <a href="#collections">Collections</a>
+          <a href="#about">About</a>
+          <button type="button" data-open="contact">Contact</button>
+        </nav>
+        <div class="header-actions">
+          <button class="icon-button" type="button" data-open="search" aria-label="Search collections"><svg><use href="#i-search"/></svg></button>
+          <button class="icon-button account-button" type="button" data-open="account" aria-label="Your saved collection"><svg><use href="#i-user"/></svg></button>
+          <button class="icon-button bag-button" type="button" data-open="bag" aria-label="Open shortlist, 0 saved collections"><svg><use href="#i-bag"/></svg><span class="bag-count" aria-hidden="true">0</span></button>
+          <button class="icon-button menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav"><svg><use href="#i-menu"/></svg></button>
+        </div>
+      </header>
+      <div class="hero-copy">
+        <p class="hero-eyebrow">AMZ JEWELRY</p>
+        <h1 id="hero-title"><span>Buy &amp; Sell</span> <span>Gold Jewelry</span></h1>
+        <p class="hero-description">Authentic pieces. Fair value. Lasting beauty.</p>
+        <div class="hero-buttons">
+          <a class="button button-gold" href="#collections"><svg class="cart"><use href="#i-cart"/></svg><span>Buy Gold Jewelry</span><svg class="arrow"><use href="#i-arrow"/></svg></a>
+          <button class="button button-outline" type="button" data-open="sell"><svg class="exchange"><use href="#i-exchange"/></svg><span>Sell Your Gold</span><svg class="arrow"><use href="#i-arrow"/></svg></button>
+        </div>
+        <div class="hero-pagination" role="group" aria-label="Featured jewelry images">
+          <button type="button" class="dot active" aria-label="Show gold jewelry selection" aria-pressed="true" data-slide="0"></button>
+          <button type="button" class="dot" aria-label="Show gold ring" aria-pressed="false" data-slide="1"></button>
+          <button type="button" class="dot" aria-label="Show gold necklace" aria-pressed="false" data-slide="2"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Our services and commitments">
+      <div class="trust-item"><svg><use href="#i-exchange"/></svg><span>Buy &amp; Sell<br>Gold Jewelry</span></div>
+      <div class="trust-item"><svg><use href="#i-diamond"/></svg><span>Guaranteed<br>Authenticity</span></div>
+      <div class="trust-item"><svg><use href="#i-shield"/></svg><span>Fair<br>Valuation</span></div>
+      <div class="trust-item"><svg><use href="#i-scales"/></svg><span>Trusted<br>Transactions</span></div>
+      <div class="trust-item"><svg><use href="#i-package"/></svg><span>Secure<br>Packaging</span></div>
+    </section>
+
+    <section class="collections" id="collections" aria-labelledby="collections-title">
+      <p class="section-eyebrow">OUR COLLECTIONS</p>
+      <div class="section-heading"><span></span><h2 id="collections-title">Explore Our Gold Collections</h2><span></span></div>
+      <div class="collection-grid">
+        <button type="button" class="collection-card" data-collection="rings"><img src="assets/ring.webp" width="254" height="188" alt="Ornate floral gold ring on burgundy satin"><span class="card-label">Rings<svg><use href="#i-arrow"/></svg></span></button>
+        <button type="button" class="collection-card" data-collection="necklaces"><img src="assets/necklace.webp" width="260" height="188" alt="Round sunburst gold pendant and chain"><span class="card-label">Necklaces<svg><use href="#i-arrow"/></svg></span></button>
+        <button type="button" class="collection-card" data-collection="earrings"><img src="assets/earrings.webp" width="260" height="188" alt="Pair of engraved gold hoop earrings"><span class="card-label">Earrings<svg><use href="#i-arrow"/></svg></span></button>
+        <button type="button" class="collection-card" data-collection="bracelets"><img src="assets/bracelet.webp" width="253" height="188" alt="Wide gold bangle with engraved floral detail"><span class="card-label">Bracelets<svg><use href="#i-arrow"/></svg></span></button>
+      </div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+      <img class="about-image" src="assets/about.webp" width="1199" height="277" alt="Burgundy AMZ Jewelry presentation box with an embossed gold monogram" loading="lazy">
+      <div class="about-copy">
+        <p class="section-eyebrow">WHY AMZ JEWELRY</p>
+        <h2 id="about-title">More Than Jewelry</h2>
+        <p>A trusted place to buy and sell gold jewelry, offering authentic pieces, fair value, and a seamless, secure experience for every customer.</p>
+        <button class="button button-gold" type="button" data-open="about">Learn More About Us<svg class="arrow"><use href="#i-arrow"/></svg></button>
+      </div>
+    </section>
+
+    <footer class="trust-strip closing-strip" aria-label="The AMZ Jewelry experience">
+      <div class="trust-item"><svg><use href="#i-people"/></svg><span>Trusted<br>by Customers</span></div>
+      <div class="trust-item"><svg><use href="#i-diamond"/></svg><span>Wide Selection<br>of Gold Jewelry</span></div>
+      <div class="trust-item"><svg><use href="#i-tag"/></svg><span>Competitive<br>&amp; Fair Prices</span></div>
+      <div class="trust-item"><svg><use href="#i-shield"/></svg><span>Safe &amp; Reliable<br>Transactions</span></div>
+    </footer>
+  </main>
+
+  <dialog class="dialog" id="site-dialog" aria-labelledby="dialog-title">
+    <button class="icon-button dialog-close" type="button" aria-label="Close dialog"><svg><use href="#i-close"/></svg></button>
+    <div id="dialog-content"></div>
+  </dialog>
+  <div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
