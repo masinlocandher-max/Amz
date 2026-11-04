@@ -19,7 +19,8 @@ npm run check
 - Reference-matched burgundy satin hero, original AMZ logo artwork, gold buttons, trust strips, four collection cards, and branded box section.
 - Responsive mobile navigation and two-column collections; touch controls, visible keyboard focus, reduced-motion support, native modal focus handling, semantic headings, and image descriptions.
 - Search by collection/style, category previews, carousel image controls, and a local shortlist with add/remove and persistence.
-- Clickable email and phone contacts in the footer and both inquiry dialogs: aliahfate13@gmail.com and +63 909 0931 983.
+- About information identifies Aliah Monsalud Zaratan as CEO and explains that buying and selling are currently arranged by email, text, or phone call.
+- Clickable email, SMS, and phone contacts in the footer, About dialog, and both inquiry dialogs: aliahfate13@gmail.com and +63 909 0931 983.
 - Sell-gold and general inquiry draft builder, downloadable text drafts, and copy controls. Drafts are not submitted, and visitor contact details are not persisted.
 - Dependency-free static build and tests covering corrupt browser storage, storage failure, saved-item validation, and truthful inquiry drafts.
 

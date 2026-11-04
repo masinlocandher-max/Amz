@@ -5,6 +5,7 @@ const content = document.querySelector('#dialog-content');
 const menu = document.querySelector('.main-nav');
 const menuToggle = document.querySelector('.menu-toggle');
 const contactMarkup = document.querySelector('#contact-links').innerHTML;
+const aboutMarkup = document.querySelector('#about-overview').innerHTML;
 let saved = readSaved();
 let lastFocus;
 let currentView = '';
@@ -83,10 +84,10 @@ function openBag(isAccount = false) {
 function openInquiry(kind, selectedId = '') {
   const selling = kind === 'sell';
   const selection = selectedId ? collections.find(item => item.id === selectedId)?.name : collections.filter(item => saved.includes(item.id)).map(item => item.name).join(', ');
-  openDialog(kind, `<p class="section-eyebrow">${selling ? 'SELL YOUR GOLD' : 'CONTACT AMZ JEWELRY'}</p><h2 id="dialog-title">${selling ? 'Tell us about your gold' : 'Prepare your inquiry'}</h2>
+  openDialog(kind, `<p class="section-eyebrow">${selling ? 'SELL YOUR GOLD' : 'CONTACT AMZ JEWELRY'}</p><h2 id="dialog-title">${selling ? 'Tell us about your gold' : 'Let’s talk jewelry'}</h2>
     <p>${selling ? 'Start with a few details about your jewelry. A final valuation requires an in-person inspection and confirmation of gold purity and weight.' : 'Tell AMZ what you are looking for, or ask about a piece you like.'}</p>
     <div class="contact-links contact-links-dialog" aria-label="Contact AMZ Jewelry">${contactMarkup}</div>
-    <p class="subtle form-note">Email or call us directly, or use the form below to prepare a draft on your device. The form does not send a message.</p>
+    <p class="subtle form-note">Buying and selling are currently arranged by email, text, or phone call. Use the links above to contact us directly. The optional form below prepares a draft on your device; it does not send a message.</p>
     <form id="inquiry-form">
       <label class="field" for="inquiry-name">Your name (optional)<input id="inquiry-name" name="name" autocomplete="name" maxlength="100"></label>
       ${selling ? '<label class="field" for="jewelry-type">Jewelry type<select name="type" id="jewelry-type" required><option value="">Select a jewelry type</option><option>Ring</option><option>Necklace</option><option>Earrings</option><option>Bracelet</option><option>Other gold jewelry</option></select></label><label class="field" for="gold-details">Purity and weight, if known<input name="gold" id="gold-details" placeholder="For example: 18K, approximately 5 grams" maxlength="160"></label>' : ''}
@@ -107,8 +108,9 @@ function openInquiry(kind, selectedId = '') {
 
 function openAbout() {
   openDialog('about', `<p class="section-eyebrow">WHY AMZ JEWELRY</p><h2 id="dialog-title">More Than Jewelry</h2>
-    <p>A trusted place to buy and sell gold jewelry, offering authentic pieces, fair value, and a seamless, secure experience for every customer.</p>
-    <p>Explore rings, necklaces, earrings, and bracelets, or prepare an inquiry about selling your gold.</p>
+    <p>${aboutMarkup}</p>
+    <p>To buy, tell us which piece or type of jewelry you are interested in and ask about availability and pricing. To sell, describe your gold jewelry and share its purity and weight if known. Confirm the details and next steps directly with AMZ Jewelry.</p>
+    <div class="contact-links contact-links-dialog" aria-label="Contact AMZ Jewelry">${contactMarkup}</div>
     <p class="subtle">Ask about the specific piece’s purity, weight, condition, and price before making a purchase. Gold-selling valuations require an inspection.</p>
     <div class="dialog-actions"><button type="button" class="button button-gold" data-browse>Explore collections${icon('arrow')}</button><button type="button" class="button button-outline" data-open="sell">Sell your gold${icon('exchange')}</button></div>`);
 }
