@@ -33,3 +33,7 @@ Browser comparison covered the supplied 1199 px desktop width and a 390 × 844 p
 Browser interactions verified keyword search ("pendant" → Necklaces), saving a category, persistence after reload, removal, the empty shortlist, opening the sell form, producing an explicitly unsent draft, and downloading that draft. Mobile navigation expanded and collapsed and its Collections link reached the two-column grid. Application console errors were absent; the browser extension emitted unrelated metadata warnings.
 
 `npm run check` passes syntax checks, all five storage/draft tests, and the static build. Photography is derived from the supplied mockup and font rasterization varies by platform; original full-resolution product assets and a supplied font would be required for a literal pixel-identical rendering. Mobile is an intentional responsive extension of the desktop reference. Commerce, authentication, actual inventory, and message delivery remain outside this first delivery.
+
+## Contact information update
+
+The owner supplied `aliahfate13@gmail.com` and `+63 909 0931 983`. Both appear as clickable email and telephone links in the footer, Contact dialog, and Sell Your Gold dialog. The footer is the single source for the reused contact markup. The unavailable-contact notice was removed; inquiry forms still prepare unsent drafts. No email or call is initiated automatically.

@@ -80,6 +80,14 @@ h2{font-size:42px;font-weight:400;color:var(--cream);line-height:1.08;letter-spa
 .closing-strip .trust-item{min-height:47px;gap:22px;font-size:19px}
 .closing-strip .trust-item:first-child{padding-left:31px}
 .closing-strip .trust-item svg{width:46px;height:46px}
+.contact-strip{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px 32px;padding:20px 5%;border-top:1px solid var(--line);background:var(--wine-dark);font-style:normal}
+.contact-label{font-size:12px;letter-spacing:.2em;color:var(--cream)}
+.contact-links{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:4px 28px;min-width:0}
+.contact-links a{display:inline-flex;align-items:center;gap:10px;min-height:44px;max-width:100%;font-size:18px;color:var(--cream)}
+.contact-links a:hover span{text-decoration:underline;text-underline-offset:4px}
+.contact-links a span{overflow-wrap:anywhere}
+.contact-links svg{width:21px;height:21px;color:var(--gold)}
+.contact-links-dialog{align-items:flex-start;flex-direction:column;gap:0;margin:0 0 18px}
 .dialog{border:1px solid #a97943;border-radius:18px;background:linear-gradient(130deg,#56000d,#270005);color:var(--text);width:min(620px,calc(100% - 32px));max-height:calc(100dvh - 48px);padding:36px;box-shadow:0 30px 100px #0008;overscroll-behavior:contain}
 .dialog::backdrop{background:#140004c9;backdrop-filter:blur(8px)}
 .dialog-close{position:absolute;right:10px;top:10px;z-index:1}
@@ -170,6 +178,9 @@ body.dialog-open{overflow:hidden}
   .closing-strip .trust-item:nth-child(2){border-right:0}
   .closing-strip .trust-item:nth-child(3){border-right:1px solid #dbaf6c77}
   .closing-strip .trust-item svg{width:34px;height:34px}
+  .contact-strip{flex-direction:column;gap:12px;padding:24px 18px}
+  .contact-strip .contact-links{flex-direction:column;gap:0}
+  .contact-links a{font-size:17px}
   .dialog{padding:30px 22px;max-height:calc(100dvh - 28px);width:calc(100% - 24px)}
   .dialog h2{font-size:31px}
   .dialog-actions{flex-direction:column}

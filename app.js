@@ -4,6 +4,7 @@ const dialog = document.querySelector('#site-dialog');
 const content = document.querySelector('#dialog-content');
 const menu = document.querySelector('.main-nav');
 const menuToggle = document.querySelector('.menu-toggle');
+const contactMarkup = document.querySelector('#contact-links').innerHTML;
 let saved = readSaved();
 let lastFocus;
 let currentView = '';
@@ -84,7 +85,8 @@ function openInquiry(kind, selectedId = '') {
   const selection = selectedId ? collections.find(item => item.id === selectedId)?.name : collections.filter(item => saved.includes(item.id)).map(item => item.name).join(', ');
   openDialog(kind, `<p class="section-eyebrow">${selling ? 'SELL YOUR GOLD' : 'CONTACT AMZ JEWELRY'}</p><h2 id="dialog-title">${selling ? 'Tell us about your gold' : 'Prepare your inquiry'}</h2>
     <p>${selling ? 'Start with a few details about your jewelry. A final valuation requires an in-person inspection and confirmation of gold purity and weight.' : 'Tell AMZ what you are looking for, or ask about a piece you like.'}</p>
-    <p class="subtle form-note">This prepares a draft on your device. It does not send a message. AMZ’s official contact channel has not been connected yet.</p>
+    <div class="contact-links contact-links-dialog" aria-label="Contact AMZ Jewelry">${contactMarkup}</div>
+    <p class="subtle form-note">Email or call us directly, or use the form below to prepare a draft on your device. The form does not send a message.</p>
     <form id="inquiry-form">
       <label class="field" for="inquiry-name">Your name (optional)<input id="inquiry-name" name="name" autocomplete="name" maxlength="100"></label>
       ${selling ? '<label class="field" for="jewelry-type">Jewelry type<select name="type" id="jewelry-type" required><option value="">Select a jewelry type</option><option>Ring</option><option>Necklace</option><option>Earrings</option><option>Bracelet</option><option>Other gold jewelry</option></select></label><label class="field" for="gold-details">Purity and weight, if known<input name="gold" id="gold-details" placeholder="For example: 18K, approximately 5 grams" maxlength="160"></label>' : ''}

@@ -19,14 +19,15 @@ npm run check
 - Reference-matched burgundy satin hero, original AMZ logo artwork, gold buttons, trust strips, four collection cards, and branded box section.
 - Responsive mobile navigation and two-column collections; touch controls, visible keyboard focus, reduced-motion support, native modal focus handling, semantic headings, and image descriptions.
 - Search by collection/style, category previews, carousel image controls, and a local shortlist with add/remove and persistence.
-- Sell-gold and general inquiry draft builder, downloadable text drafts, and copy controls. Drafts are not submitted, and contact information is not stored.
+- Clickable email and phone contacts in the footer and both inquiry dialogs: aliahfate13@gmail.com and +63 909 0931 983.
+- Sell-gold and general inquiry draft builder, downloadable text drafts, and copy controls. Drafts are not submitted, and visitor contact details are not persisted.
 - Dependency-free static build and tests covering corrupt browser storage, storage failure, saved-item validation, and truthful inquiry drafts.
 
 ## Delivery boundary
 
 This is the first storefront implementation, not a live jewelry trading platform. The following must be supplied and verified before commerce launch:
 
-1. AMZ's official contact channel, business identity, address, and opening hours.
+1. AMZ's business identity, address, and opening hours. The owner-provided email and phone number are already added.
 2. Actual inventory photos, gold purity, weight, condition, prices, and availability.
 3. Account authentication, order management, a payment provider, and a verified delivery process.
 4. Server-side inquiry handling with consent, validation, spam protection, and appropriate retention rules.
