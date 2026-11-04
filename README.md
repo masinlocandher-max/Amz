@@ -45,4 +45,12 @@ Until then, category art is explicitly illustrative inside collection previews; 
 - `docs/design.md`: reference interpretation and image provenance.
 - `_headers`: security headers for hosts supporting this convention. Configure equivalent headers on other hosts.
 
-No deployment has been performed by adding this source. Deploy only after selecting the hosting destination and reviewing the delivery boundary above.
+## Hosting
+
+The selected custom address is `https://amzjewelry.sterlingsgrp.com/`.
+
+The site is configured for a private hosted preview at `https://amz-jewelry.fbautisat23.chatgpt.site`. The tracked `.openai/hosting.json` identifies this hosting project and its static build directory. Publication status and custom-domain DNS verification must be checked in hosting before announcing either URL as available.
+
+The custom domain uses GoDaddy nameservers. Connect only the `amzjewelry` subdomain and its hosting-provider validation records; preserve the parent domain and email records. The domain still needs DNS configuration and verification. A private preview requires the owner's sign-in; opening it to customers is a separate access change.
+
+Vercel project creation was denied by the connected account on 4 November 2026. No Vercel project or deployment was created.
