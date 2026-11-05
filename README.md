@@ -21,7 +21,7 @@ npm run check
 - Search by collection/style, category previews, carousel image controls, and a local shortlist with add/remove and persistence.
 - About information identifies Aliah Monsalud Zaratan as CEO and explains that buying and selling are currently arranged by email, text, or phone call.
 - Clickable email, SMS, and phone contacts in the footer, About dialog, and both inquiry dialogs: aliahfate13@gmail.com and +63 909 0931 983.
-- Sell-gold and general inquiry draft builder, downloadable text drafts, and copy controls. Drafts are not submitted, and visitor contact details are not persisted.
+- Sell-gold and general inquiry builder with review, copy, and prefilled email or SMS handoff. Customers confirm sending in their own email or messaging app; the website never claims an inquiry was sent, and visitor contact details are not persisted.
 - Dependency-free static build and tests covering corrupt browser storage, storage failure, saved-item validation, and truthful inquiry drafts.
 
 ## Delivery boundary

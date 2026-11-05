@@ -94,7 +94,7 @@ function openInquiry(kind, selectedId = '') {
       <label class="field" for="inquiry-message">${selling ? 'Tell us about the piece' : 'Your message'}<textarea id="inquiry-message" name="message" required maxlength="2000" placeholder="${selling ? 'Describe the piece and its condition.' : 'What would you like to know?'}">${!selling && selection ? escapeHtml(`I would like to inquire about: ${selection}. Please share current availability, gold purity, weight, and pricing.`) : ''}</textarea></label>
       <button type="submit" class="button button-gold">Prepare draft${icon('arrow')}</button>
     </form>
-    <section class="form-result" hidden aria-label="Your inquiry draft"><p role="status">Your draft is ready. It has not been sent.</p><label class="field" for="draft-text">Review your draft<textarea id="draft-text" readonly></textarea></label><div class="dialog-actions"><button type="button" class="button button-gold" data-download>Download draft</button><button type="button" class="button button-outline" data-copy>Copy draft</button></div></section>`);
+    <section class="form-result" hidden aria-label="Your inquiry draft"><p role="status">Your draft is ready. Choose email or text to contact AMZ Jewelry. Your message is not sent until you confirm it in your email or messaging app.</p><label class="field" for="draft-text">Review your draft<textarea id="draft-text" readonly></textarea></label><div class="dialog-actions"><a class="button button-gold" data-email-draft href="mailto:aliahfate13@gmail.com">Email this inquiry${icon('mail')}</a><a class="button button-outline" data-text-draft href="sms:+639090931983">Text this inquiry${icon('message')}</a><button type="button" class="button button-outline" data-copy>Copy draft</button></div></section>`);
   content.querySelector('form').addEventListener('submit', event => {
     event.preventDefault();
     const data = Object.fromEntries(new FormData(event.target));
@@ -102,6 +102,10 @@ function openInquiry(kind, selectedId = '') {
     const result = content.querySelector('.form-result');
     result.hidden = false;
     result.querySelector('textarea').value = text;
+    const message = text.replace('AMZ JEWELRY — INQUIRY DRAFT\nThis draft has not been sent.\n\n', 'AMZ JEWELRY — INQUIRY\n\n');
+    const subject = selling ? 'Gold jewelry selling inquiry' : 'Gold jewelry buying inquiry';
+    result.querySelector('[data-email-draft]').href = `mailto:aliahfate13@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    result.querySelector('[data-text-draft]').href = `sms:+639090931983?body=${encodeURIComponent(message)}`;
     result.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'nearest'});
   });
 }
